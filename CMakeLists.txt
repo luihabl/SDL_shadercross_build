@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.20)
+project(SDL_shadercross_build)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/bin)
+
+set(SDL_STATIC ON)
+set(SDL_SHARED OFF)
+add_subdirectory(SDL)
+
+set(BUILD_SHARED_LIBS OFF)
+set(SDLSHADERCROSS_VENDORED ON)
+set(SDLSHADERCROSS_SPIRVCROSS_SHARED OFF)
+set(SDLSHADERCROSS_CLI_STATIC ON)
+add_subdirectory(SDL_shadercross)
